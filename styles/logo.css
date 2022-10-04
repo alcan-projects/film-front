@@ -1,0 +1,21 @@
+header {
+    padding: 1em;
+    background-color: rgb(18, 17, 17);
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 40px;
+}
+header .logo h1 {
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+header .logo span {
+    color: #aaa;
+    font-size: 8px;
+    margin-top: 16px;
+}

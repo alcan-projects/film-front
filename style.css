@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: rgb(22, 21, 21);
+}
+p {
+    font-size: 16px;
+}
+
+article section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+article section .boxed {
+    width: 12.8%;
+    display: flex;
+    margin: 0 1%;
+    border: solid 1px rgb(74, 74, 74);
+    padding: 0.8%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+article section .boxed:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+article section .boxed a {
+    text-decoration: none;
+}
+
+article section .boxed a img {
+    width: 100%;
+    border-radius: 5px;
+}
+article section .boxed a p {
+    color: white;
+}
