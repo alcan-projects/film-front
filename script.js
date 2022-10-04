@@ -1,5 +1,5 @@
 async function start(){
-    axios.get('http://localhost:5000/films').then(res => {
+    axios.get('http://157.230.91.29:5000/films').then(res => {
         const db = res.data;
         for(let i = 0; i < db.length; i++){
             document.getElementById('list').innerHTML += `
