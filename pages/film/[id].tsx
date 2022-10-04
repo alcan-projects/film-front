@@ -2,6 +2,7 @@ import axios from "axios";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import ENV from "../env";
 
 // types
 import { FilmType } from "../../src/interfaces/Film";
@@ -12,13 +13,12 @@ import { FilmStyled } from "../../src/styles/film";
 const Film: NextPage = () => {
   const { query } = useRouter();
   const [data, setDate] = useState<FilmType>();
-  const url = "http://localhost:5000";
 
   useEffect(() => {
     axios
-      .get(`${url}/films/${query.id}`)
+      .get(`${ENV.API_URL}/films/${query.id}`)
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
         setDate(res.data);
       })
       .catch((error) => {

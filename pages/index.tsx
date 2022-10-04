@@ -10,6 +10,7 @@ import { HomeStyled } from "../src/styles/home";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ENV from "./env";
 
 // types
 import { FilmType } from "../src/interfaces/Film";
@@ -17,12 +18,12 @@ import Head from "next/head";
 
 const Home: NextPage = () => {
   const [data, setData] = useState<Array<FilmType>>();
-  const url = "http://localhost:5000"; // "http://157.230.91.29:5000";
 
   useEffect(() => {
     axios
-      .get(`${url}/films`)
+      .get(`${ENV.API_URL}/films`)
       .then((res) => {
+        console.log(res.data);
         setData(res.data);
       })
       .catch((error) => {
@@ -32,14 +33,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>DPlay free</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:title" content="Animalify" key="Animalify" />
-        <meta property="og:title" content="Animalify" key="Animalify" />
-
-        <link rel="shortcut icon" href="favicon.png" />
-      </Head>
       <NavBar />
       <HomeStyled>
         <section>
